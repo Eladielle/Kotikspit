@@ -1,10 +1,10 @@
 
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/hooks";
-import type { RootState } from '../../app/store';
 import { loadPageNews } from "./pageNewsSlice";
 import "./news-styles.css";
 import { Link } from "react-router-dom";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import type { RootState } from "../../../app/store";
 
 
 export default function PageNews() {
