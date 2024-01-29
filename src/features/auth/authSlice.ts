@@ -9,10 +9,10 @@ const initialState: AuthState = {
   user: undefined,
   loginFormError: undefined,
   registerFormError: undefined,
-  token: undefined,
+  token: localStorage.getItem("accessToken"),
 }
 
-export const getUser = createAsyncThunk("api/users/my/profile", () =>
+export const getUser = createAsyncThunk("auth/getUser", () =>
   api.user(),
 )
 
@@ -45,7 +45,9 @@ const authSlice = createSlice({
       state.registerFormError = undefined
     },
     logout: state => {
-      state.token = undefined
+      state.token = null
+      state.authChecked = true
+      localStorage.clearItem("accessToken")
       state.user = undefined
     },
   },
@@ -61,17 +63,20 @@ const authSlice = createSlice({
       .addCase(login.fulfilled, (state, action) => {
         state.loginFormError = undefined
         state.token = action.payload.token
+        localStorage.setItem("accessToken", action.payload.token)
         state.authChecked = true
       })
       // 332 так изменяется стэйт если вернулась ошибка
       .addCase(login.rejected, (state, action) => {
         state.loginFormError = action.error.message
-        state.token = undefined
+        state.token = null
+        localStorage.clearItem("accessToken")
         state.user = undefined
       })
       .addCase(register.fulfilled, (state, action) => {
         state.loginFormError = undefined
         state.token = action.payload.token
+        localStorage.setItem("accessToken", action.payload.token)
         state.authChecked = true
       })
       .addCase(register.rejected, (state, action) => {

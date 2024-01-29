@@ -32,6 +32,7 @@ export default function Login() {
           placeholder="password"
           value={password}
           onChange={e => setPassword(e.target.value)}
+          autoComplete={password ? 'on' : 'off'}
         />
         <button type="submit">login</button>
       </form>
