@@ -37,3 +37,10 @@
     transform: translateY(0px);
   }
 }
+.auth-form {
+  width: 600px;
+  margin: 0 auto;
+  color: rgb(159, 4, 148);
+  background-color: rgb(255, 253, 254);
+}
+
