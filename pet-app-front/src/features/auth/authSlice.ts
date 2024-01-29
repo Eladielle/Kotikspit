@@ -46,6 +46,7 @@ const authSlice = createSlice({
     },
     logout: state => {
       state.token = undefined
+      //state.authChecked = true
       state.user = undefined
     },
   },
