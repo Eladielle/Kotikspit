@@ -2,9 +2,8 @@ import { useCallback, useState } from "react"
 import type { ChangeEvent, FormEvent } from "react"
 import { Box, Button, IconButton, InputAdornment, Link, TextField, } from "@mui/material"
 import { Visibility, VisibilityOff } from '@mui/icons-material'
-import { useSelector } from "react-redux"
 import { useLocation, useNavigate } from "react-router-dom"
-import { useAppDispatch } from "../../app/hooks"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import { selectRegisterFormError } from "./Selectors"
 import { login, register, resetRegisterFormError } from "./authSlice"
 
@@ -12,7 +11,7 @@ export default function Register() {
   const location = useLocation();
 	const dispatch = useAppDispatch();
 	const navigate = useNavigate();
-	const error = useSelector(selectRegisterFormError)
+	const error = useAppSelector(selectRegisterFormError)
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [passwordRepeat, setPasswordRepeat] = useState('');
@@ -38,7 +37,7 @@ export default function Register() {
       navigate('/');
 
       if (location.pathname === '/api/v1/auth/registration') {
-        navigate('/api/users/my/profile');
+        navigate('auth/login');
       } else if (location.pathname.startsWith('api/v1/users/this')) {
         navigate(location.pathname);
       }

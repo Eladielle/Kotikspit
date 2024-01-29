@@ -1,4 +1,3 @@
-import { store } from "../../app/store"
 import type Credentials from "./types/LoginDTO"
 import type RegistrationDTO from "./types/RegistrationDTO"
 import type TokenDTO from "./types/TokenDTO"
@@ -24,9 +23,11 @@ export async function login(credentials: Credentials): Promise<TokenDTO> {
 }
 
 export async function user(): Promise<User> {
+  const token = localStorage.getItem("accessToken")
   const res = await fetch("api/v1/users/this", {
     headers: {
-      Authenticate: `Bearer`,
+      accept: "*/*",
+      Authorization: `Bearer ${token}`,
     },
   })
   if (res.status >= 400) {

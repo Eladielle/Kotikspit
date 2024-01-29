@@ -10,7 +10,7 @@ export default function Layout() {
   const dispatch = useAppDispatch()
   useEffect(() => {
     dispatch(getUser())
-  }, [dispatch])
+  }, [dispatch, token])
   return (
     <>
       <Header />
