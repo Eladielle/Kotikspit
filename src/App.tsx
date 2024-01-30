@@ -6,6 +6,7 @@ import Home from "./components/Home"
 import Register from "./features/auth/Register"
 import PageNews from "./features/news/page-news/PageNews"
 import OneNews from "./features/news/one-news/OneNews"
+import Comment from "./features/news/comment/Comment"
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
+          <Route path="comment/:commentId" element={<Comment />} />
           <Route path="news/:newsId" element={<OneNews />} />
           <Route path="news" element={<PageNews />} />
           <Route path="register" element={<Register />} />

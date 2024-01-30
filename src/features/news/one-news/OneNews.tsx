@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { loadOneNews } from "./NewsSlice";
 import type { RootState } from "../../../app/store";
 import { useParams } from "react-router-dom";
-import { loadComments } from "./CommentsSlice";
+import { loadComments } from "../comment/CommentsSlice";
 
 
 export default function OneNews() {
@@ -20,30 +20,11 @@ export default function OneNews() {
   return (
     <div>
       <div style={styles.newsContainer}>
-       
+
         <div style={styles.imageContainer}>
           <img style={styles.image} src={oneNews.news.imageUrl} alt="News" />
         </div>
-        
       </div>
-      <div>
-              {comments.comments.map((comment) => (
-            <div key={comment.id} >
-                      <div>
-                <div >{comment.text}</div>
-                <div >{comment.author}</div>
-                {/* {comment.reactions.map((reaction) => (
-                  <div key={reaction.id}>
-                    <div/>
-                ))} */}
-               
-                <div className="gamer-news-title">{comment.created_at}</div>
-              </div>
-            
-            </div>
-          ))}
-      </div>
-
     </div>
   );
 
