@@ -1,6 +1,6 @@
-import type OneNews from "./OneNews"
+import type OneNews from './OneNews'
 
-export default interface OneNewsState{
-    news: OneNews;
-    error?: string;
+export default interface OneNewsState {
+	news: OneNews
+	error?: string
 }

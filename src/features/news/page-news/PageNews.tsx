@@ -1,20 +1,17 @@
-
-import { useEffect } from "react";
-import { loadPageNews } from "./pageNewsSlice";
-import "./news-styles.css";
-import { Link } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import type { RootState } from "../../../app/store";
-
+import { useEffect } from 'react'
+import { loadPageNews } from './pageNewsSlice'
+import './news-styles.css'
+import { Link } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../../../app/hooks'
+import type { RootState } from '../../../app/store'
 
 export default function PageNews() {
-    
-    const pageNews = useAppSelector((state: RootState)=> state.news);
+	const pageNews = useAppSelector((state: RootState) => state.news)
 
-    const dispatch = useAppDispatch();
-    useEffect(()=>{
-        dispatch(loadPageNews());
-    }, []);
+	const dispatch = useAppDispatch()
+	useEffect(() => {
+		dispatch(loadPageNews())
+	}, [])
 
     return (
         <div className="gamerNewsContainer">

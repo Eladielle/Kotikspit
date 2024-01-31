@@ -1,5 +1,4 @@
 import type OneNews from "./type/OneNews";
-import type Comments from "../comment/type/Comments";
 
 export async function getNews(newsId: number): Promise<OneNews> {
 
@@ -7,6 +6,5 @@ export async function getNews(newsId: number): Promise<OneNews> {
     return res.json();
 }
 export function getAll(arg0: number): any {
-    throw new Error("Function not implemented.");
+	throw new Error('Function not implemented.')
 }
-
