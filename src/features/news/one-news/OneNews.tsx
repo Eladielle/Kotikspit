@@ -4,11 +4,12 @@ import { loadOneNews } from "./NewsSlice";
 import type { RootState } from "../../../app/store";
 import { useParams } from "react-router-dom";
 import { loadComments } from "../comment/CommentsSlice";
+import "../page-news/news-styles.css";
 
 
 export default function OneNews() {
 
-  const oneNews = useAppSelector((state: RootState) => state.oneNews);
+  const news = useAppSelector((state: RootState) => state.oneNews);
   const comments = useAppSelector((state: RootState) => state.comments);
   const { newsId } = useParams();
   const dispatch = useAppDispatch();
@@ -17,15 +18,24 @@ export default function OneNews() {
     dispatch(loadComments(Number(newsId)));
   }, []);
 
-  return (
-    <div>
-      <div style={styles.newsContainer}>
 
-        <div style={styles.imageContainer}>
-          <img style={styles.image} src={oneNews.news.imageUrl} alt="News" />
-        </div>
+
+  return (
+    <div className="gamerOneNewsContainer">
+      <div className="oneNewsContent">
+        <div className="gamerOneNewsItem">
+                  <div className="gamer-news-content">
+                  <div className="gamer-news-title">{news.news.title}</div>
+            <div className="gamer-news-title">{news.news.date}</div>
+            <div className="gamer-news-image">
+              <img src={news.news.imageUrl} alt="image news" />
+            </div>
+            <div className="news-text-html" dangerouslySetInnerHTML={{ __html: news.news.text }} />
+            </div>
+            </div>
       </div>
-    </div>
+      
+     </div>
   );
 
 }

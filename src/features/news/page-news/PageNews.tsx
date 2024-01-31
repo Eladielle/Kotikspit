@@ -20,16 +20,15 @@ export default function PageNews() {
         <div className="gamerNewsContainer">
           {pageNews.pageNews.content.map((news) => (
             <div key={news.id} className="gamerNewsItem">
-                <Link to={String(news.id)}>
+                <Link className="linkNews" to={String(news.id)}>
                       <div className="gamer-news-content">
-                <div className="gamer-news-date">{news.date}</div>
+                <div className="gamer-news-title">{news.date}</div>
                 <div className="gamer-news-image">
                   <img src={news.imageUrl} alt="image news" />
                 </div>
-                <div className="gamer-news-title">{news.title}</div>
+                <div className="gamer-news-title hoverNews">{news.title}</div>
               </div>
                 </Link>
-            
             </div>
           ))}
         </div>
