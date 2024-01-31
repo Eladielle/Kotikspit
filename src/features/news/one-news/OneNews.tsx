@@ -34,39 +34,12 @@ export default function OneNews() {
             </div>
             </div>
       </div>
-      
+      <form action="http://localhost:8080/api/v1/users/avatar" method="POST" encType="multipart/form-data" >
+      <input type="file" name="multipartFile"/>
+      <input type="submit" value="Отправить"/>
+      </form>
      </div>
   );
 
 }
-const styles = {
-  newsContainer: {
-    padding: "20px",
-    border: "1px solid #ddd",
-    marginBottom: "20px",
-    backgroundColor: "#1c1c1c",
-    color: "#fff",
-    borderRadius: "8px",
-    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
-  },
-  date: {
-    fontSize: "14px",
-    marginBottom: "10px",
-  },
-  imageContainer: {
-    marginBottom: "10px",
-  },
-  image: {
-    width: "100%",
-    height: "auto",
-    borderRadius: "8px",
-  },
-  title: {
-    fontSize: "18px",
-    fontWeight: "bold",
-    marginBottom: "10px",
-  },
-  text: {
-    fontSize: "16px",
-  },
-};
+
