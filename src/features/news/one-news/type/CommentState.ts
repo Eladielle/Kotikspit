@@ -1,6 +1,6 @@
-import type Comments from "./Comments";
+import type Comments from './Comments'
 
-export default interface CommentState{
-    comments: Comments[];
-    error?: string;
+export default interface CommentState {
+	comments: Comments[]
+	error?: string
 }

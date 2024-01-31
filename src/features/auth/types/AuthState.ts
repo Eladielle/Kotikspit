@@ -1,9 +1,9 @@
-import type User from "./User"
+import type User from './User'
 
 export default interface AuthState {
-  authChecked: boolean
-  token: string|null
-  user?: User
-  loginFormError?: string
-  registerFormError?: string
+	authChecked: boolean
+	token: string | null
+	user?: User
+	loginFormError?: string
+	registerFormError?: string
 }
