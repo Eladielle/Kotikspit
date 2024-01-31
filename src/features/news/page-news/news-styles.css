@@ -53,6 +53,9 @@
     justify-content: center;
   }
   .gamerNewsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30%; 
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -62,6 +65,17 @@
   }
   .hoverNews:hover{
     color: #13fc97;
+  }
+  .date-and-comment{
+    margin-top: 10px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .date-pageNews{
+    display: flex;
+    align-items: flex-end;
   }
   .gamer-news-list {
     list-style: none;
