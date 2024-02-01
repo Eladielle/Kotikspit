@@ -37,7 +37,25 @@
   .linkNews{
     text-decoration: none;
   }
+  iframe{
+    height: 339px;
+    width: 600px;
+  }
+  .gamer-one-news-title{
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #13fc97;
+  }
+  .kg-embed-card{
+    display: flex;
+    justify-content: center;
+  }
   .gamerNewsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 30%; 
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -46,7 +64,18 @@
     color: #fff;
   }
   .hoverNews:hover{
-    color: #740a0a;
+    color: #13fc97;
+  }
+  .date-and-comment{
+    margin-top: 10px;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .date-pageNews{
+    display: flex;
+    align-items: flex-end;
   }
   .gamer-news-list {
     list-style: none;
@@ -80,11 +109,12 @@
   .gamer-news-title {
     font-size: 18px;
     font-weight: bold;
-    color: #13fc97;
+    color:#86102d;
   }
 
 
   .news-text-html{
     color: #13fc97;
   }
+  
   
