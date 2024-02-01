@@ -1,7 +1,6 @@
-import type PageNews from './PageNews';
+import type PageNews from './PageNews'
 
 export default interface PageNewsState {
-    pageNews: PageNews;
-    error?: string;
-
+	pageNews: PageNews
+	error?: string
 }

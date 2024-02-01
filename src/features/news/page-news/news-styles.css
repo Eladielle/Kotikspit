@@ -12,7 +12,31 @@
     background-position: center; /* Центрируем изображение */
     padding: 20px;
   }
-  
+  .oneNewsContent{
+    display: flex;
+    justify-content: center;
+
+  }
+  .gamerOneNewsContainer{
+    display: flex;
+    justify-content: center;
+    background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
+    background-size: cover; /* Растягиваем изображение на весь контейнер */
+    background-repeat: no-repeat; /* Не повторяем изображение */
+    background-position: center; /* Центрируем изображение */
+    padding: 20px;
+  }
+  .gamerOneNewsItem {
+    width: 65%; 
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  .linkNews{
+    text-decoration: none;
+  }
   .gamerNewsItem {
     width: 30%; 
     margin-bottom: 20px;
@@ -21,7 +45,9 @@
     background-color: #1c1c1c;
     color: #fff;
   }
-  
+  .hoverNews:hover{
+    color: #740a0a;
+  }
   .gamer-news-list {
     list-style: none;
     padding: 0;
@@ -54,6 +80,11 @@
   .gamer-news-title {
     font-size: 18px;
     font-weight: bold;
+    color: #13fc97;
+  }
+
+
+  .news-text-html{
     color: #13fc97;
   }
   
