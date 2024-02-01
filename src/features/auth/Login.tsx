@@ -1,75 +1,127 @@
-import type { FormEvent } from 'react'
-import { useState } from 'react'
-import { useAppDispatch } from '../../app/hooks'
-import { login } from './authSlice'
+import type { ChangeEvent, FormEvent} from "react";
+import { useCallback, useState } from "react"
+import { useAppDispatch, useAppSelector } from "../../app/hooks"
+import { login, resetLoginFormError } from "./authSlice"
+import { VisibilityOff, Visibility } from "@mui/icons-material"
+import {
+  Box,
+  Link,
+  TextField,
+  InputAdornment,
+  IconButton,
+  Button,
+} from "@mui/material"
+import { useNavigate } from "react-router-dom"
+import React from "react"
+import { selectLoginFormError } from "./Selectors"
 
-// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export default function Login() {
-	const [email, setEmail] = useState('')
-	const [password, setPassword] = useState('')
-	const dispatch = useAppDispatch()
-	// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-	function handleSubmit(e: FormEvent<HTMLFormElement>) {
-		e.preventDefault()
-		dispatch(login({ email, password }))
-	}
+  const navigate = useNavigate()
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const [showPassword, setShowPassword] = React.useState<boolean>(false)
+  const dispatch = useAppDispatch()
+  const error = useAppSelector(selectLoginFormError)
+  const handleTogglePasswordVisibility = (): void => {
+    setShowPassword((prevShowPassword: boolean) => !prevShowPassword)
+  }
 
-	return (
-		<div className="min-h-screen flex relative items-center justify-center top-[0px]">
-			<div className="bg-gray-800 p-10 rounded shadow-md w-96">
-				<h1 className="text-2x1 text-lg mb-6 mt-0 text-white">
-					<p>Welclome Back!</p>
-					<p>Please Login to continue:</p>
-				</h1>
-				<form onSubmit={handleSubmit}>
-					<div className="mb-4">
-						<label htmlFor="email" className="block text-white">
-							Email
-						</label>
-						<input
-							type="text"
-							name="email"
-							id="email"
-							placeholder="Enter your email"
-							value={email}
-							onChange={e => setEmail(e.target.value)}
-							className="w-full border rounded px-3 py-2 mt-1"
-						/>
-					</div>
-					<div className="mb-4">
-						<label htmlFor="password" className="block text-white">
-							Password
-						</label>
-						<input
-							type="password"
-							name="password"
-							id="password"
-							placeholder="Enter your password"
-							value={password}
-							onChange={e => setPassword(e.target.value)}
-							autoComplete={password ? 'on' : 'off'}
-							className="w-full border rounded px-3 py-2 mt-1"
-						/>
-					</div>
-					<div className="flex items-center justify-between mb-4">
-						{/* Forgot Password link */}
-						<a href="/forgotPassword" className="text-sm text-white hover:text-primary">
-							Forgot Password?
-						</a>
-						{/* Registration link */}
-						<a href="/register" className="text-sm text-white hover:text-primary">
-							<p>Don't have an account?</p>
-							<p>Please Register</p>
-						</a>
-					</div>
-					<button
-						type="submit"
-						className="w-full bg-primary text-white rounded px-4 py-2 hover:bg-red-600"
-					>
-						Login
-					</button>
-				</form>
-			</div>
-		</div>
-	)
+  const handleSubmit = useCallback(
+    async (e: FormEvent) => {
+      e.preventDefault()
+      const dispatchResult = await dispatch(
+        login({
+          email,
+          password,
+        }),
+      )
+
+      if (login.fulfilled.match(dispatchResult)) {
+        navigate("/")
+      }
+      if (login.rejected.match(dispatchResult)) {
+        console.error(dispatchResult.error.message)
+      }
+    },
+    [dispatch, email, password, navigate],
+  )
+
+  const handleEmailChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setEmail(e.target.value)
+      // 332 очищаем ошибку
+      dispatch(resetLoginFormError())
+    },
+    [dispatch],
+  )
+
+  const handlePasswordChange = useCallback(
+    (e: ChangeEvent<HTMLInputElement>) => {
+      setPassword(e.target.value)
+      dispatch(resetLoginFormError())
+    },
+    [dispatch],
+  )
+
+  return (
+    <Box sx={{ fontFamily: "Literata", my: 2 }}>
+      <form className="auth-form" onSubmit={handleSubmit}>
+        <Box sx={{ fontSize: 40, fontWeight: 500, textAlign: "center" }}>
+          Login page
+        </Box>
+        <Box sx={{ margin: "0 auto" }}>
+          <TextField
+            autoComplete="false"
+            required
+            fullWidth
+            color="secondary"
+            margin="normal"
+            id="email"
+            label="Email"
+            variant="outlined"
+            value={email}
+            onChange={handleEmailChange}
+          />
+        </Box>
+        <Box sx={{ margin: "0 auto" }}>
+          <TextField
+            required
+            fullWidth
+            color="secondary"
+            margin="normal"
+            id="password"
+            label="Password"
+            variant="outlined"
+            type={showPassword ? "text" : "password"}
+            value={password}
+            onChange={handlePasswordChange}
+            InputProps={{
+              endAdornment: (
+                <InputAdornment position="end">
+                  <IconButton
+                    aria-label="toggle password visibility"
+                    onClick={handleTogglePasswordVisibility}
+                    edge="end"
+                  >
+                    {showPassword ? <VisibilityOff /> : <Visibility />}
+                  </IconButton>
+                </InputAdornment>
+              ),
+            }}
+          />
+        </Box>
+        <Box sx={{ textAlign: "center", my: 2 }}>
+          <Button variant="contained" type="submit" color="info">
+            Log in
+          </Button>
+          {error && <Box sx={{ display: "block" }}>{error}</Box>}
+        </Box>
+        <Box sx={{ textAlign: "center", my: 2 }}>
+          <Link href="/register" color="secondary">
+            Not registred? Join us!
+          </Link>
+        </Box>
+      </form>
+    </Box>
+  );
 }
