@@ -13,24 +13,27 @@ export default function Comment() {
     }, []);
 
   return (
-    <div>
-        < >Comment</>
+
+    <div className="gamerNewsContainer">
+        < h1>Comment</h1>
     
     {comments.comments.map((comment) => (
       <div key={comment.id} >
         <div>
-          <div >{comment.text}</div>
-          <div >{comment.author}</div>
+        {/* <div  className="gamer-news-title">{comment.avatar}</div> */}
+          <div className="gamer-news-title" >{comment.author}</div>
           <div className="gamer-news-title">{comment.created_at}</div>
         </div>
+        <div  className="gamer-news-title">{comment.text}</div>
         <div>
             {comment.reactions.map((reaction)=>(
                 <><div>
                     <img src={reaction.photoAuthor} alt="pthoto" />
                 </div>
-                <div>
+                <div className="gamer-news-title">
                         {reaction.reaction}
                 </div>
+            
                 </>
             ))}
         </div>
