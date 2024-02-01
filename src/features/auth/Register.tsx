@@ -34,7 +34,7 @@ export default function Register() {
     
     if (register.fulfilled.match(dispatchResult)) {
       await dispatch(login({ email, password }));
-      navigate('/');
+      alert("Вам отправлено электронное письмо для подтверждения");
 
       if (location.pathname === '/api/v1/auth/registration') {
         navigate('auth/login');
