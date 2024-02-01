@@ -12,7 +12,7 @@ import About from './features/about/About'
 import Contacts from './features/contacts/Contacts'
 import Experience from './features/experience/Experience'
 import ForgotPassword from './features/auth/ForgotPassword'
-import Comment from "./features/news/comment/Comment"
+import Comment from './features/news/comment/Comment'
 
 const App = (): React.ReactNode => {
 	return (
