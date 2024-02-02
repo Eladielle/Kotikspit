@@ -25,7 +25,7 @@ const App = (): React.ReactNode => {
 					<Route path="adventures" element={<Adventures />} />
 					<Route path="games" element={<Games />} />
 					<Route path="news" element={<PageNews />} />
-					<Route path="comment/:commentId" element={<Comment />} />
+					<Route path="news/comment/:commentId" element={<Comment />} />
 					<Route path="news/:newsId" element={<OneNews />} />
 					<Route path="about" element={<About />} />
 					<Route path="contacts" element={<Contacts />} />

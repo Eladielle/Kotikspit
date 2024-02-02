@@ -14,8 +14,6 @@ export default function OneNews() {
     dispatch(loadOneNews(Number(newsId)));
   }, []);
 
-
-
   return (
     <div className="gamerOneNewsContainer">
       <div className="oneNewsContent">
@@ -35,5 +33,4 @@ export default function OneNews() {
       </div>
      </div>
   );
-
   }

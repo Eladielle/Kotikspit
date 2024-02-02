@@ -20,7 +20,6 @@ export default function Comment() {
     {comments.comments.map((comment) => (
       <div key={comment.id} >
         <div>
-        {/* <div  className="gamer-news-title">{comment.avatar}</div> */}
           <div className="gamer-news-title" >{comment.author}</div>
           <div className="gamer-news-title">{comment.created_at}</div>
         </div>

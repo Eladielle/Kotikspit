@@ -6,10 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
+    background-image: url('https://images.wallpaperscraft.ru/image/single/tumannost_orion_tumannost_kosmos_1070540_3840x2400.jpg');
     background-size: cover; /* Растягиваем изображение на весь контейнер */
     background-repeat: no-repeat; /* Не повторяем изображение */
-    background-position: center; /* Центрируем изображение */
+    background-position: center; 
     padding: 20px;
   }
   .oneNewsContent{
@@ -20,7 +20,8 @@
   .gamerOneNewsContainer{
     display: flex;
     justify-content: center;
-    background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
+    /* background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg'); */
+    background-image: url('/public/img/news-img/tumannost.jpg');
     background-size: cover; /* Растягиваем изображение на весь контейнер */
     background-repeat: no-repeat; /* Не повторяем изображение */
     background-position: center; /* Центрируем изображение */

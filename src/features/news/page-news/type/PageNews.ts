@@ -7,6 +7,7 @@ export default interface PageNews {
 		title: string
 		imageUrl: string
 		text: string
+		sizeComments: number
 		isDeleted: boolean
 		date: string
 	}>
