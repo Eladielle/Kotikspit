@@ -1,0 +1,16 @@
+.bg-header {
+  position: relative;
+  top: -90px;
+  left: 0;
+  background-image: url('/img/bg-night.jpg');
+  background-repeat: no-repeat;
+  width: 1470px;
+  height: 100vh;
+  color: #fff;
+}
+.new_main {
+  position: absolute;
+  font-size: 45px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}

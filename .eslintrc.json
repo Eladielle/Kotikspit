@@ -49,8 +49,8 @@
   "prettier/prettier": [
   "error",
   {
-  "printWidth": 100,
-  "endOfLine": "lf",
+  "printWidth": 80,
+  "endOfLine": "auto",
   "singleQuote": true,
   "tabWidth": 2,
   "indentStyle": "space",

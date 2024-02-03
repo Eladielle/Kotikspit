@@ -1,4 +1,4 @@
-import Navigation from './navigation/navMainPage'
+import Navigation from '../../components/navigation/navMainPage'
 
 export default function AdventuresHeader(): JSX.Element {
 	return (

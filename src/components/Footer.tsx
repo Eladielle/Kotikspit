@@ -1,4 +1,4 @@
-export default function Footer() {
+export default function Footer(): JSX.Element {
 	return (
 		<>
 			<div className="flex flex-col gap-5 items-center justify-center bottom-10 w-full">

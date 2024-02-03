@@ -1,0 +1,20 @@
+.bg-about-header {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url('/img/bg-about.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  color: #fff;
+}
+.bg-main {
+  position: relative;
+  top: 0;
+  left: 0;
+  background-image: url('/img/bg-night.jpg');
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
