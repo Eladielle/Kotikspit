@@ -1,13 +1,16 @@
-export default function Contacts() {
+import Navigation from '../../components/navigation/navMainPage'
+export default function Contacts(): JSX.Element {
 	return (
 		<>
-			<div className=" flex-col relative bottom-[200px] left-[200px] w-2/4 text-5xl font-bold text-white">
+			<Navigation />
+			<div className=" flex-col py-40 px-40 w-2/4 text-5xl font-bold text-white">
 				<h1>CONTACTS:</h1>
-				<p>::::::::::::::::::</p>
+				<p>:::::::::::::::::</p>
 				<br />
 				<p>
-					"BEYOND REALMS 29 Ltd." +49 69 12345678 beyondrealms@gmail.com The Matrix Building, unit
-					7, Musterstrasse 777, Frankfurt am Main, Germany Company Info | Legal Notice | Privacy
+					&quot;BEYOND REALMS 29 Ltd.&quot; +49 69 12345678
+					beyondrealms@gmail.com The Matrix Building, unit 7, Musterstrasse 777,
+					Frankfurt am Main, Germany Company Info | Legal Notice | Privacy
 					Policy 2024 ALL RIGHTS RESERVED ©
 				</p>
 			</div>

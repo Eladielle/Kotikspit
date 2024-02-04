@@ -1,4 +1,10 @@
-const Sidebar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }): JSX.Element => {
+const Sidebar = ({
+	isOpen,
+	toggle,
+}: {
+	isOpen: boolean
+	toggle: () => void
+}): JSX.Element => {
 	return (
 		<>
 			<div
@@ -10,7 +16,12 @@ const Sidebar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }): J
 			>
 				<button className="absolute right-0 p-5" onClick={toggle}>
 					{/* Close icon */}
-					<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="48"
+						height="48"
+						viewBox="0 0 24 24"
+					>
 						<path
 							fill="currentColor"
 							d="M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z"
@@ -31,7 +42,7 @@ const Sidebar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }): J
 					</li>
 					<li>
 						<a href="/book" onClick={toggle}>
-							<p>BOOK AN experience</p>
+							<p>BOOK AN EXPERIENCE</p>
 						</a>
 					</li>
 					<li>
@@ -41,12 +52,12 @@ const Sidebar = ({ isOpen, toggle }: { isOpen: boolean; toggle: () => void }): J
 					</li>
 					<li>
 						<a href="/about" onClick={toggle}>
-							<p>About Us</p>
+							<p>ABOUT US</p>
 						</a>
 					</li>
 					<li>
 						<a href="/contacts" onClick={toggle}>
-							<p>Contacts</p>
+							<p>CONTACTS</p>
 						</a>
 					</li>
 				</ul>

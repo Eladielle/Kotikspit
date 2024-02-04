@@ -6,27 +6,20 @@ export default function AboutHeader(): JSX.Element {
 			<div>
 				<Navigation />
 			</div>
-			<div className="bg-about-header">
-				<div className="absolute flex-container w-[50%] bottom-40 left-[400px]">
-					<ul className="absolute flex justify-around gap-6 bottom-50">
-						<li>
-							<button className="btn-xs rounded py-4 px-6 btn-rounded bg-primary sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500 text-secondary text-sm">
-								<a href="https://www.youtube.com/embed/hr8O9LfxGlE">
-									WATCH TRAILER
-								</a>
-							</button>
-						</li>
-						<li>
-							<button className="btn-xs rounded py-4 px-6 btn-rounded bg-primary sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500 text-secondary text-sm">
-								<a href="/games">ABOUT THE ADVENTURE</a>
-							</button>
-						</li>
-						<li>
-							<button className="btn-xs rounded py-4 px-6 btn-rounded bg-primary sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500 text-secondary text-sm">
-								<a href="/experience">BOOK YOUR EXPERIENCE</a>
-							</button>
-						</li>
-					</ul>
+			<div className="bg-about-header"></div>
+			<div className="relative w-full">
+				<div className="align-middle absolute flex top-1/2 left-1/2 gap-5 -translate-x-1/2 -translate-y-64 text-secondary">
+					<button className="btn-xs rounded py-4 px-6 btn-rounded bg-primary opacity-70 sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500 text-sm">
+						<a href="https://www.youtube.com/embed/hr8O9LfxGlE">
+							WATCH TRAILER
+						</a>
+					</button>
+					<button className="btn-xs rounded py-4 px-6 btn-rounded bg-primary opacity-70 sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500 text-sm">
+						<a href="/games">ABOUT THE ADVENTURE</a>
+					</button>
+					<button className="btn-xs rounded py-4 px-6 btn-rounded bg-primary opacity-70 sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500 text-sm">
+						<a href="/experience">BOOK YOUR EXPERIENCE</a>
+					</button>
 				</div>
 			</div>
 		</>

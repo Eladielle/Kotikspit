@@ -66,7 +66,7 @@ export default function Header(): JSX.Element {
 				<div className="absolute top-[225px] left-[760px]">
 					<img src="/img/people.png" alt="People" width={710} height={60} />
 				</div>
-				<div className="absolute flex flex-col gap-3 items-center justify-center top-[700px] left-[500px] text-[32px] font-black">
+				<div className="absolute flex flex-col gap-3 items-center justify-center top-[700px] left-1/2 -translate-x-1/2 -translate-y-0  text-[32px] font-black">
 					<p className="text-primary">BEYOND REALMS PARK</p>
 					<p className="text-secondary">- THIS IS</p>
 				</div>

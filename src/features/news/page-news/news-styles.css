@@ -6,9 +6,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background-image: url('https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg');
-    background-size: cover; /* Растягиваем изображение на весь контейнер */
-    background-repeat: no-repeat; /* Не повторяем изображение */
+    background-image: url('./img/bg-space.jpg');
+    /* background-size: cover; Растягиваем изображение на весь контейнер */
+    /* https://starwalk.space/gallery/images/what-is-space/1920x1080.jpg */
+    background-repeat: repeat; /* Не повторяем изображение */
     background-position: center; /* Центрируем изображение */
     padding: 20px;
   }
