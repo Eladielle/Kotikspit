@@ -13,6 +13,7 @@ import Contacts from './features/contacts/Contacts'
 import Experience from './features/experience/Experience'
 import ForgotPassword from './features/auth/ForgotPassword'
 import Comment from "./features/news/comment/Comment"
+import Confirm from "./features/auth/Confirm"
 
 const App = (): React.ReactNode => {
 	return (
@@ -30,6 +31,7 @@ const App = (): React.ReactNode => {
 					<Route path="contacts" element={<Contacts />} />
 					<Route path="login" element={<Login />} />
 					<Route path="register" element={<Register />} />
+					<Route path="confirm/:confirmCode" element={<Confirm />} />
 					<Route path="forgotPassword" element={<ForgotPassword />} />
 				</Route>
 			</Routes>

@@ -1,18 +1,34 @@
+import { RootState } from "../../app/store"
+import { useEffect } from "react"
+import { useAppSelector, useAppDispatch } from "../../app/hooks"
+
+import GameCard from "./GameCard"
+import { Grid } from "@mui/material"
+import { getGames } from "./gamesSlice"
+import { selectGames } from "./Selectors"
+
 export default function Games() {
-	return (
-		<>
-			<div className="text-5xl font-bold text-white">
-				<h1>Games</h1>
-				<p>
-					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-					invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-					accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-					sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-					elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-					diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd
-					gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-				</p>
-			</div>
-		</>
-	)
+  const games = useAppSelector(selectGames)
+
+  const dispatch = useAppDispatch()
+  useEffect(() => {
+    dispatch(getGames({ pageNum: 0, pageSize: 10 }))
+  }, [dispatch])
+  // const filteredGames = games?.filter((game) => {
+  // });
+
+  return (
+    <Grid container rowSpacing={2} columnSpacing={{ xs: 1, sm: 2, md: 0 }}>
+      {games?.map(game => (
+        <GameCard
+          id={game.id}
+          image={game.image}
+          title={game.title}
+          price={game.price}
+          numberOfPlayers={game.numberOfPlayers}
+          minAge={game.minAge}
+        />
+      ))}
+    </Grid>
+  )
 }

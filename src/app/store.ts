@@ -4,13 +4,15 @@ import authSlice from "../features/auth/authSlice"
 import pageNewsReducer from "../features/news/page-news/pageNewsSlice"
 import oneNewsReduser from "../features/news/one-news/NewsSlice"
 import commentsReduser from "../features/news/comment/CommentsSlice"
+import gamesSlice from "../features/games/gamesSlice"
 
 export const store = configureStore({
   reducer: {
     auth: authSlice,
     news: pageNewsReducer,
     oneNews: oneNewsReduser,
-    comments: commentsReduser
+    comments: commentsReduser,
+    games: gamesSlice
   },
 
 })
