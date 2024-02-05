@@ -1,4 +1,3 @@
-import Footer from '../../components/Footer'
 import '../about/about.css'
 import AboutHeader from '../about/AboutHeader'
 
@@ -45,6 +44,5 @@ export default function About(): JSX.Element {
 				</div>
 			</div>
 		</>
-		
 	)
 }

@@ -1,0 +1,20 @@
+.bg-header {
+	position: relative;
+	top: 0;
+	left: 0;
+	background-image: url('/img/bg-header.png');
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: inherit;
+	height: 64.313rem;
+}
+.new_main {
+  position: absolute;
+  top: 26%;
+	left: 8%;
+	font-size: 45px;
+	line-height: 1.2;
+}
+.new_main {
+  font-family: "Arial Black";
+}

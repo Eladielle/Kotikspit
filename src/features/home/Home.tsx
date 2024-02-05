@@ -1,4 +1,3 @@
-import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 
 export default function Home(): JSX.Element {
@@ -7,7 +6,7 @@ export default function Home(): JSX.Element {
 			<Header />
 			<main className="flex relative w-full h-full mb-[50px]">
 				<div className="flex flex-col gap-5 items-center justify-center w-full">
-					<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-150px] w-3/4 h-full">
+					<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-100px] w-3/4 h-full">
 						<div>
 							<img src="/img/i1.png" alt="Suooort" />
 						</div>
@@ -53,7 +52,7 @@ export default function Home(): JSX.Element {
 							</p>
 						</div>
 					</div>
-					<div className="w-[900px] mt-[-400px]">
+					<div className="w-[900px] mt-[-300px]">
 						<div>
 							<video
 								className="border-2 border-primary rounded-lg mt-[-100px]"
@@ -69,9 +68,28 @@ export default function Home(): JSX.Element {
 							<p className="text-secondary">GET YOUR TEAM TOGETHER</p>
 							<p className="text-primary">OTHER WORLDS ARE WAITING FOR YOU!</p>
 						</div>
-						<div>
-							<div className="mt-[-100px]">
+						<div className="p-2 mx-auto relative flex justify-center space-x-2 text-secondary mb-80">
+							<div className=" w-[1600px] absolute">
 								<img src="/img/arena.png" alt="Arena" />
+							</div>
+							<div className="absolute text-lg border-2 border-primary p-6 w-2/4 right-0">
+								<p>
+									Virtual arena is a new, exciting and affordable virtual
+									reality attraction for location-based entertainment (LBE). The
+									package includes more than 10 competitive games, different map
+									sizes, game server and operator app. Thanks to the virtual
+									arena update guarantee, you get a brand new free game every
+									quarter.
+								</p>
+								<br />
+								<p>
+									VA is the ultimate family-friendly and comfortable free-roam
+									VR experience for returning guests. It can be operated with
+									just one employee. Players are introduced to the experience in
+									less than 3 minutes. With the integrated tournament mode, you
+									can offer team events and e-sports activities even for large
+									groups.
+								</p>
 							</div>
 						</div>
 					</div>
