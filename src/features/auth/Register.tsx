@@ -21,20 +21,20 @@ export default function Register() {
 		setShowPassword((prevShowPassword: boolean) => !prevShowPassword)
 	}
 
-  const handleSubmit = useCallback(
-    async (e: FormEvent) => {
-      e.preventDefault();
-      const dispatchResult = await dispatch(
-      register({
-        email,
-        password,
-        passwordRepeat,
-      })
-    );
-    
-    if (register.fulfilled.match(dispatchResult)) {
-      await dispatch(login({ email, password }));
-      alert("Вам отправлено электронное письмо для подтверждения");
+	const handleSubmit = useCallback(
+		async (e: FormEvent) => {
+			e.preventDefault()
+			const dispatchResult = await dispatch(
+				register({
+					email,
+					password,
+					passwordRepeat,
+				})
+			)
+
+			if (register.fulfilled.match(dispatchResult)) {
+				await dispatch(login({ email, password }))
+				alert('Вам отправлено электронное письмо для подтверждения')
 
 				if (location.pathname === '/api/v1/auth/registration') {
 					navigate('auth/login')

@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../app/hooks";
-import type { RootState } from "../../../app/store";
-import { useEffect } from "react";
-import { loadComments } from "./CommentsSlice";
+import { useParams } from 'react-router-dom'
+import { useAppDispatch, useAppSelector } from '../../../app/hooks'
+import type { RootState } from '../../../app/store'
+import { useEffect } from 'react'
+import { loadComments } from './CommentsSlice'
 
 export default function Comment() {
   const comments = useAppSelector((state: RootState) => state.comments);
