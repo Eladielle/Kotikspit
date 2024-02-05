@@ -13,8 +13,7 @@ export default function PageNews(): JSX.Element {
   useEffect(() => {
     dispatch(loadPageNews())
   }, [])
-
-  return (
+	return (
     <div className="gamerNewsContainer">
       {pageNews.pageNews.content.map(news => (
         <div key={news.id} className="gamerNewsItem">
