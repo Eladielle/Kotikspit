@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../../app/hooks'
 import type { RootState } from '../../../app/store'
 import { colors } from '@mui/material'
+import Navigation from '../../../components/navigation/navMainPage'
+
 
 export default function PageNews(): JSX.Element {
   const pageNews = useAppSelector((state: RootState) => state.news)
@@ -14,6 +16,8 @@ export default function PageNews(): JSX.Element {
     dispatch(loadPageNews())
   }, [])
 	return (
+    <>
+			<Navigation />
     <div className="gamerNewsContainer">
       {pageNews.pageNews.content.map(news => (
         <div key={news.id} className="gamerNewsItem">
@@ -43,5 +47,6 @@ export default function PageNews(): JSX.Element {
         </div>
       ))}
     </div>
+    </>
   )
 }
