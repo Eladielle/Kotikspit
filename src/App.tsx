@@ -13,7 +13,9 @@ import Contacts from './features/contacts/Contacts'
 import Experience from './features/experience/Experience'
 import ForgotPassword from './features/auth/ForgotPassword'
 import Comment from "./features/news/comment/Comment"
-import Confirm from "./features/auth/Confirm"
+import { user } from './features/auth/api'
+import CreateGame from './features/games/CreateGame'
+
 
 const App = (): React.ReactNode => {
 	return (
@@ -24,6 +26,8 @@ const App = (): React.ReactNode => {
 					<Route path="experience" element={<Experience />} />
 					<Route path="adventures" element={<Adventures />} />
 					<Route path="games" element={<Games />} />
+					{/* {user && (user.role === 'Admin') && */}
+					<Route path="/adminCab" element={<CreateGame />} />
 					<Route path="news" element={<PageNews />} />
 					<Route path="news/comment/:commentId" element={<Comment />} />
 					<Route path="news/:newsId" element={<OneNews />} />
@@ -31,7 +35,7 @@ const App = (): React.ReactNode => {
 					<Route path="contacts" element={<Contacts />} />
 					<Route path="login" element={<Login />} />
 					<Route path="register" element={<Register />} />
-					<Route path="confirm/:confirmCode" element={<Confirm />} />
+					{/* <Route path="confirm/:confirmCode" element={<Confirm />} /> */}
 					<Route path="forgotPassword" element={<ForgotPassword />} />
 				</Route>
 			</Routes>
