@@ -11,7 +11,10 @@ export default function Adventures(): JSX.Element {
 						<img src="/img/img_kernel.jpg" alt="Kernel: Confrontation" />
 					</div>
 					<div className="container absolute flex-col left-32 top-[140px] w-7/12 text-secondary">
-						<div className="text-[42px] font-bold">GAMES</div>
+						<span className="text-[42px] font-bold text-primary">
+							BEYOND REALMS{' '}
+						</span>
+						<span className="text-[42px] font-bold">GAMES</span>
 						<div className="text-[28px] font-bold py-5">
 							Kernel: Confrontation
 						</div>

@@ -4,7 +4,7 @@ export default function Home(): JSX.Element {
 	return (
 		<>
 			<Header />
-			<main className="flex relative w-full h-full mb-[50px]">
+			<main className="flex relative w-full h-full mb-[300px]">
 				<div className="flex flex-col gap-5 items-center justify-center w-full">
 					<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-100px] w-3/4 h-full">
 						<div>

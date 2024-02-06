@@ -1,0 +1,9 @@
+.bg-contacts {
+  top: 0;
+  left: 0;
+  background-image:url('/img/bg-space.jpg');
+  width:inherit;
+  height: 100vh;
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+}

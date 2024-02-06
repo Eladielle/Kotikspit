@@ -1,16 +1,9 @@
-.bg-header {
-  position: relative;
-  top: -90px;
+.bg-login {
+  top: 0;
   left: 0;
   background-image: url('/img/bg-night.jpg');
-  background-repeat: no-repeat;
-  width: 1470px;
+  width: 100vw;
   height: 100vh;
-  color: #fff;
-}
-.new_main {
-  position: absolute;
-  font-size: 45px;
-  line-height: 1.2;
-  text-transform: uppercase;
+  background-repeat: repeat-y;
+  background-attachment: fixed;
 }
