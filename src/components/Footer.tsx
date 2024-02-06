@@ -1,7 +1,7 @@
 export default function Footer(): JSX.Element {
 	return (
 		<>
-			<div className="footer flex relative top-0 w-full min-h-full mt-[4200px] mb-0">
+			<div className="footer flex relative top-0 w-full min-h-full mt-[50px] mb-20">
 				<div className="flex flex-col gap-5 items-center justify-center  bottom-0 w-full">
 					<div>
 						<img
