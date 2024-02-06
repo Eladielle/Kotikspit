@@ -4,8 +4,8 @@
   background-image: url('/img/bg-night.jpg');
   width: 100vw;
   height: 100vh;
-  background-repeat: no-repeat-x;
   background-repeat: repeat-y;
+  background-attachment: fixed;
 }
 .v_lined {
     padding-left: 20px;
