@@ -14,7 +14,7 @@ import {
 } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { selectLoginFormError } from './Selectors'
-import '../../features/auth/auth-bg.css'
+import '../auth/auth-bg.css'
 import Navigation from '../../components/navigation/navMainPage'
 
 export default function Login(): JSX.Element {
@@ -68,7 +68,7 @@ export default function Login(): JSX.Element {
 	return (
 		<>
 			<Navigation />
-			<div className="bg-header flex items-center justify-center mt-20">
+			<div className="bg-login flex items-center justify-center">
 				<Box sx={{ fontFamily: 'Arial', my: 2 }}>
 					<form className="auth-form" onSubmit={handleSubmit}>
 						<Box

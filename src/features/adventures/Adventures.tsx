@@ -4,12 +4,58 @@ import './advent.css'
 export default function Adventures(): JSX.Element {
 	return (
 		<>
-			<main className="mb-[-300px]">
-				<div className="bg-adv">
-					<Navigation />
-					<div className="relative w-full h-full">
-						<div>
-							<img src="/img/img_colony.jpg" alt="Colony: Code Red" />
+			<main className="bg-adv w-full h-full">
+				<Navigation />
+				<div className="relative w-full h-full">
+					<div className="container mx-auto">
+						<img src="/img/img_kernel.jpg" alt="Kernel: Confrontation" />
+					</div>
+					<div className="container absolute flex-col left-32 top-[140px] w-7/12 text-secondary">
+						<span className="text-[42px] font-bold text-primary">
+							BEYOND REALMS{' '}
+						</span>
+						<span className="text-[42px] font-bold">GAMES</span>
+						<div className="text-[28px] font-bold py-5">
+							Kernel: Confrontation
+						</div>
+						<div className="v_lined left-0 px-0">
+							&nbsp; GENRE
+							<br />
+							&nbsp; PvP
+						</div>
+						<div className="v_lined left-0 px-20">
+							&nbsp; SESSION
+							<br />
+							&nbsp; 60 min
+						</div>
+						<div className="v_lined left-0 px-0">
+							&nbsp; PLAYERS
+							<br />
+							&nbsp; 2+
+						</div>
+						<div className="v_lined left-0 px-20">
+							&nbsp; AGE
+							<br />
+							&nbsp; 8+
+						</div>
+						<div className=" text-base py-5">
+							BEYOND REALMS is happy to present its new hyper-realistic shooter
+							- KERNEL. Two teams will fight on the territory of an abandoned
+							bunker where abnormal things take place: the mysterious black sun
+							changes the laws of physics.
+						</div>
+					</div>
+					<div>
+						<div className="container absolute flex bottom-[150px] place-content-center gap-x-6 text-sm text-secondary">
+							<button className="rounded w-50 py-2 px-2 btn-rounded bg-primary sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500">
+								<a href="/games">MORE DETAILS</a>
+							</button>
+							<button className="rounded w-50 py-2 px-2 btn-rounded bg-primary sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500">
+								<a href="/experience">BOOK YOUR EXPERIENCE</a>
+							</button>
+							<button className="rounded w-50 py-2 px-2 btn-rounded bg-primary sm:btn-sm md:btn-md lg:btn-lg hover:bg-rose-500">
+								<a href="/video/29en.webm">WATCH TRAILER</a>
+							</button>
 						</div>
 						<div className="absolute flex-col left-32 top-[200px] w-7/12 text-secondary">
 							<div className="text-[42px] font-bold">GAMES</div>
