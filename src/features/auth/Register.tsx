@@ -76,7 +76,7 @@ export default function Register() {
 	return (
 		<>
 			<Navigation />
-			<div className="bg-header flex items-center justify-center mt-20">
+			<div className="bg-login flex items-center justify-center">
 				<Box sx={{ fontFamily: 'Arial', my: 2 }}>
 					<form className="auth-form" onSubmit={handleSubmit}>
 						<Box
