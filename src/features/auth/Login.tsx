@@ -1,5 +1,5 @@
-import type { ChangeEvent, FormEvent, JSXElementConstructor } from 'react'
-import { useCallback, useState } from 'react'
+import type { ChangeEvent, FormEvent } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { login, resetLoginFormError } from './authSlice'
 import { VisibilityOff, Visibility } from '@mui/icons-material'
@@ -10,15 +10,16 @@ import {
 	InputAdornment,
 	IconButton,
 	Button,
-	createTheme,
 } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
-import { selectLoginFormError } from './Selectors'
+import { selectAuth, selectLoginFormError } from './Selectors'
 import '../auth/auth-bg.css'
 import Navigation from '../../components/navigation/navMainPage'
+import { useSelector } from 'react-redux'
 
 export default function Login(): JSX.Element {
 	const navigate = useNavigate()
+	const selector = useSelector(selectAuth);
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [showPassword, setShowPassword] = useState<boolean>(false)
@@ -47,6 +48,15 @@ export default function Login(): JSX.Element {
 		},
 		[dispatch, email, password, navigate]
 	)
+	useEffect(() => {
+    if (selector!.user?.role === 'User') {
+      navigate('/');
+    }
+    if (selector!.user?.role === 'Admin') {
+      navigate('/adminCab');
+    }
+  }, [selector, navigate]);
+
 
 	const handleEmailChange = useCallback(
 		(e: ChangeEvent<HTMLInputElement>) => {

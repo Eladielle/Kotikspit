@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { user } from '../../../features/auth/api'
 import Button from './button'
 import Logo from './logo'
 export default function Navbar({ toggle }: { toggle: () => void }) {

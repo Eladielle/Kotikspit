@@ -4,7 +4,7 @@ import Game, { GameId } from './types/GameID';
 export async function createGame(gameDTO: GameDto): Promise<Game> {
   const res = await fetch('/api/v1/games', {
     method: 'POST',
-    body: JSON.stringify({gameDTO}),
+    body: JSON.stringify(gameDTO),
     headers: {
       'Content-Type': 'application/json',
       accept: '*/*',
@@ -49,8 +49,12 @@ export async function deleteGame(id: GameId): Promise<Game> {
   return result.json();
 }
 
-export async function getGame(id: number): Promise<Game> {
-  const res = await fetch(`/api/v1/games/${id}`);
+export async function getGame(id: GameId): Promise<Game> {
+  const res = await fetch(`/api/v1/games/game${id}`, {
+    headers: {
+      accept: '*/*',
+    },
+  });
   if (res.status >= 400) {
     const answer = await res.json();
     throw new Error(answer.message);

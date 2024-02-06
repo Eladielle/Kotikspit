@@ -13,7 +13,6 @@ import {
 import { EuroRounded } from '@mui/icons-material';
 import { red } from '@mui/material/colors';
 import { useAppDispatch } from '../../app/hooks';
-import { deleteGame } from './gamesSlice';
 
 export default function GameCard({
   id,
@@ -33,10 +32,10 @@ export default function GameCard({
   const handleClick = (): void => {
     navigate(`/game-details/${id}`);
   };
-  const dispatch = useAppDispatch()
-  const handleClickDelete = (id: number):void => {
-    dispatch(deleteGame(id));
-  };
+  // const dispatch = useAppDispatch()
+  // const handleClickDelete = (id: number):void => {
+  //   dispatch(deleteGame(id));
+  // };
   // useEffect(() => {
   //   const gameData = (data: any): { type: string; payload: number } => ({
   //     type: 'GameData',
@@ -76,7 +75,7 @@ export default function GameCard({
           </CardActions>
       <CardActions sx={{ textAlign: 'center', bgcolor: red.A400, }}>
         <Button variant="contained" color="secondary" size="medium">Buy ticket</Button>
-        <Button variant="contained" color="secondary" size="medium" onClick={() => handleClickDelete(id)}>Delete</Button>
+        {/* <Button variant="contained" color="secondary" size="medium" onClick={() => handleClickDelete(id)}>Delete</Button> */}
         
       </CardActions>
     </Card>

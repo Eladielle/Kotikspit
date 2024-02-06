@@ -1,5 +1,4 @@
 export default interface GameDto {
-	image: string
 	title: string
 	price: number
 	genre: string
