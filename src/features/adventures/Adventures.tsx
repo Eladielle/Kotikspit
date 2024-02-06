@@ -34,7 +34,7 @@ export default function Adventures(): JSX.Element {
 								<br />
 								&nbsp; 12+
 							</div>
-							<div className=" text-base">
+							<div className=" text-base1">
 								The year is 2508. Your journey begins on a distant exploration
 								and research station located near exoplanet Alekta in the
 								chilling, harrowing emptiness of space. You’re far beyond the
