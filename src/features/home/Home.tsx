@@ -86,7 +86,7 @@ export default function Home(): JSX.Element {
 									VA is the ultimate family-friendly and comfortable free-roam
 									VR experience for returning guests. It can be operated with
 									just one employee. Players are introduced to the experience in
-									less than 3 minutes. With the integrated tournament mode, you
+									less than 3 minutes. With the integrated tournament mode, we
 									can offer team events and e-sports activities even for large
 									groups.
 								</p>

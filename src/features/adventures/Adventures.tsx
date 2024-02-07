@@ -4,9 +4,9 @@ import './advent.css'
 export default function Adventures(): JSX.Element {
 	return (
 		<>
-			<main className="bg-adv w-full h-full">
+			<main className="bg-adv w-full h-full mb-[50px]">
 				<Navigation />
-				<div className="relative w-full h-full">
+				<div id="kernel" className="relative w-full h-full">
 					<div className="container mx-auto">
 						<img src="/img/img_kernel.jpg" alt="Kernel: Confrontation" />
 					</div>
@@ -59,7 +59,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full py-[100px]">
+				<div id="colony" className="relative w-full h-full py-[100px]">
 					<div className="container mx-auto">
 						<img src="/img/img_colony.jpg" alt="Colony: Code Red" />
 					</div>
@@ -107,7 +107,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full">
+				<div id="shmooter" className="relative w-full h-full">
 					<div className="container mx-auto">
 						<img src="/img/img_shmooter.jpeg" alt="Shmooter" />
 					</div>
@@ -165,7 +165,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full py-[100px]">
+				<div id="island" className="relative w-full h-full py-[100px]">
 					<div className="container mx-auto">
 						<img src="/img/img_island.jpeg" alt="Island Assault" />
 					</div>
@@ -222,7 +222,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full">
+				<div id="safe_night" className="relative w-full h-full">
 					<div className="container mx-auto">
 						<img src="/img/img_safe_night.jpeg" alt="Safe Night" />
 					</div>
@@ -276,7 +276,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full py-[100px]">
+				<div id="ghost_mansion" className="relative w-full h-full py-[100px]">
 					<div className="container mx-auto">
 						<img src="/img/img_ghost_mansion.jpeg" alt="Ghost Mansion" />
 					</div>
@@ -330,7 +330,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full">
+				<div id="space_battle" className="relative w-full h-full">
 					<div className="container mx-auto">
 						<img src="/img/img_space_battle.jpeg" alt="Space Battle" />
 					</div>
@@ -384,7 +384,7 @@ export default function Adventures(): JSX.Element {
 						</div>
 					</div>
 				</div>
-				<div className="relative w-full h-full py-[100px]">
+				<div id="space_battle2" className="relative w-full h-full py-[100px]">
 					<div className="container mx-auto">
 						<img src="/img/img_space_battle2.png" alt="Space Battle 2" />
 					</div>
