@@ -7,43 +7,43 @@ import './styles.buy.css'
 import PageBuy from './type/PageBuy'
 
 export default function Buy(): JSX.Element {
-	const pageBuy = useAppSelector((state: RootState) => state.experience.pageBuy)
+	const pageBuy = useAppSelector((state: RootState) => state.experience)
+	// const games = useAppSelector((state: RootState) => state.experience.)
+
+	const gameTitles = [
+		'Kernel: Confrontation',
+		'Colony: Code Red',
+		'Shmooter',
+		'Island Assault',
+		'Safe night',
+		'Ghost Mansion',
+		'Space Battle',
+		'Space Battle 2',
+	]
 
 	const dispatch = useAppDispatch()
 	useEffect(() => {
 		dispatch(loadPageBuy())
-	}, [dispatch])
+	}, [])
 
-	const [selectedGame, setSelectedGame] = useState<
-		PageBuy['content'][0] | null
-	>(null)
-	const [selectedDate, setSelectedDate] = useState<Date | null>(null)
-	const [selectedTime, setSelectedTime] = useState('')
-	const [numPlayers, setNumPlayers] = useState<number>(1)
-
-	const handleGameChange = (event: ChangeEvent<HTMLSelectElement>): void => {
-		const gameId = parseInt(event.target.value)
-		const gameSelected = pageBuy.content.find(game => game.id === gameId)
-		setSelectedGame(gameSelected || null)
+	function handleDateChange(date: Date | null): void {
+		throw new Error('Function not implemented.')
 	}
 
-	const handleDateChange = (date: Date | null): void => {
-		setSelectedDate(date)
+	function handleTimeChange(time: Time | null): void {
+		throw new Error('Function not implemented.')
 	}
 
-	const handleTimeChange = (event: ChangeEvent<HTMLInputElement>): void => {
-		setSelectedTime(event.target.value)
+	function handleSubmit(e: FormEvent<HTMLFormElement>): void {
+		throw new Error('Function not implemented.')
 	}
 
-	const handleNumPlayersChange = (
-		event: ChangeEvent<HTMLInputElement>
-	): void => {
-		setNumPlayers(parseInt(event.target.value))
+	function handleNumPlayersChange(event: ChangeEvent<HTMLInputElement>): void {
+		throw new Error('Function not implemented.')
 	}
-
-	const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
-		event.preventDefault()
-		// Add your form submission logic here
+	function showMessage(messsage: string) {
+		messsage = 'Game'
+		alert('You successfully bought ' + messsage)
 	}
 
 	return (
@@ -60,44 +60,37 @@ export default function Buy(): JSX.Element {
 					<form className="form-container" onSubmit={handleSubmit}>
 						<label>
 							Select a game:
-							<select
-								value={selectedGame ? selectedGame.id : ''}
-								onChange={handleGameChange}
-							>
-								<option value="">Select</option>
-								{pageBuy.content.map(game => (
-									<option key={game.id} value={game.id}>
-										{game.title} - Price: {game.price} - Players:{' '}
-										{game.numberOfPlayers}
+							<select>
+								{gameTitles.map((title, id) => (
+									<option key={id} value={title}>
+										{title}
 									</option>
 								))}
 							</select>
 						</label>
 						<label>
-							Select a date: {selectedDate && selectedDate.toDateString()}
+							Select a date:
 							<input
 								type="date"
 								onChange={e => handleDateChange(new Date(e.target.value))}
 							/>
 						</label>
 						<label>
-							Select playing time (minutes): {selectedTime}
+							Select playing time (minutes):
 							<input
-								type="number"
-								value={selectedTime}
-								onChange={handleTimeChange}
+								type="time"
+								onChange={e => handleTimeChange(new Time(e.target.value))}
 							/>
 						</label>
 						<label>
-							Number of players: {numPlayers}
-							<input
-								type="number"
-								value={numPlayers}
-								onChange={handleNumPlayersChange}
-							/>
+							Number of players:
+							<input type="number" onChange={handleNumPlayersChange} />
 						</label>
-
-						<button className="btn-primary hover:bg-rose-500" type="submit">
+						<button
+							className="btn-primary hover:bg-rose-500"
+							type="submit"
+							onClick={() => showMessage('the Game')}
+						>
 							BOOK AN EXPERIENCE
 						</button>
 					</form>

@@ -4,10 +4,11 @@ import PageBuyState from './type/PageBuyState'
 
 const initialState: PageBuyState = {
 	pageBuy: {
-		totalElements: 0,
-		totalPages: 0,
-		size: 0,
-		content: [],
+		id: 0,
+		image: '',
+		title: '',
+		price: 0,
+		numberOfPlayers: '',
 	},
 	error: undefined,
 }
