@@ -3,6 +3,7 @@
   left: 0;
   background-image: url('/img/bg-about.jpg');
   background-repeat: no-repeat;
+  background-size: contain;
   width: 100vw;
   height: 100vh;
 }
