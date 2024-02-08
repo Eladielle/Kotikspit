@@ -41,7 +41,7 @@ export default function Buy(): JSX.Element {
 	function handleNumPlayersChange(event: ChangeEvent<HTMLInputElement>): void {
 		throw new Error('Function not implemented.')
 	}
-	function showMessage(messsage: string) {
+	function showMessage(messsage: string): void {
 		messsage = 'Game'
 		alert('You successfully bought ' + messsage)
 	}

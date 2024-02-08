@@ -14,16 +14,22 @@ const initialState: AuthState = {
 
 export const getUser = createAsyncThunk('auth/getUser', () => api.user())
 
-export const login = createAsyncThunk('login', async (credentials: Credentials) => {
-	if (!credentials.email.trim() || !credentials.password.trim()) {
-		throw new Error('Не все поля заполнены')
+export const login = createAsyncThunk(
+	'login',
+	async (credentials: Credentials) => {
+		if (!credentials.email.trim() || !credentials.password.trim()) {
+			throw new Error('Не все поля заполнены')
+		}
+		return api.login(credentials)
 	}
-	return api.login(credentials)
-})
+)
 
-export const register = createAsyncThunk('api/register', async (data: RegistrationDTO) => {
-	return api.register(data)
-})
+export const register = createAsyncThunk(
+	'api/register',
+	async (data: RegistrationDTO) => {
+		return api.register(data)
+	}
+)
 
 const authSlice = createSlice({
 	name: 'auth',

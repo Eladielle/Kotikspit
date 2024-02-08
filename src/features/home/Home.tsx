@@ -4,9 +4,9 @@ export default function Home(): JSX.Element {
 	return (
 		<>
 			<Header />
-			<main className="flex relative w-full h-full mb-[300px]">
+			<main className="flex relative w-full h-full mb-[100px]">
 				<div className="flex flex-col gap-5 items-center justify-center w-full">
-					<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-100px] w-3/4 h-full">
+					<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-130px] w-3/4 h-full">
 						<div>
 							<img src="/img/i1.png" alt="Suooort" />
 						</div>
@@ -55,7 +55,7 @@ export default function Home(): JSX.Element {
 					<div className="w-[900px] mt-[-300px]">
 						<div>
 							<video
-								className="border-2 border-primary rounded-lg mt-[-100px]"
+								className="border-2 border-primary rounded-lg mt-[-150px]"
 								width="900"
 								height="600"
 								autoPlay
@@ -68,11 +68,11 @@ export default function Home(): JSX.Element {
 							<p className="text-secondary">GET YOUR TEAM TOGETHER</p>
 							<p className="text-primary">OTHER WORLDS ARE WAITING FOR YOU!</p>
 						</div>
-						<div className="p-2 mx-auto relative flex justify-center space-x-2 text-secondary mb-80">
-							<div className=" w-[1600px] absolute">
+						<div className="flex-col text-secondary">
+						<div className="w-[1200px] mt-[-150px]">
 								<img src="/img/arena.png" alt="Arena" />
 							</div>
-							<div className="absolute text-lg border-2 border-primary p-6 w-2/4 right-0">
+							<div className="text-base border-2 border-primary p-4 rounded-lg mt-[-100px]">
 								<p>
 									Virtual arena is a new, exciting and affordable virtual
 									reality attraction for location-based entertainment (LBE). The
@@ -91,6 +91,14 @@ export default function Home(): JSX.Element {
 									groups.
 								</p>
 							</div>
+						</div>
+						<div className="text-[32px] font-black py-20 text-center">
+							<p className="text-secondary">
+								EXPERIENCE THE FASCINATING WORLD OF
+							</p>
+							<p className="text-primary">
+								BEYOUND REALMS 29 VR REALITY TODAY!
+							</p>
 						</div>
 					</div>
 				</div>
