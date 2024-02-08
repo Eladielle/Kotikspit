@@ -1,0 +1,61 @@
+.bg-buy {
+  top: 0;
+  left: 0;
+  background-image: url('/img/big-5.jpeg');
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+/* Form container */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #3b3b3b;
+  opacity: 0.9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: gray;
+}
+
+/* Form labels */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight:100;
+}
+
+/* Select and input fields */
+select,
+input[type='date'],
+input[type='number'] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #bf1f43;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Submit button */
+button[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  background-color: #bf1f43;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+}
+
+button[type='submit']:hover {
+  background-color: #fa4444;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  margin-top: 5px;
+}

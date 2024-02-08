@@ -1,4 +1,4 @@
-import type { ChangeEvent, FormEvent, JSXElementConstructor } from 'react'
+import type { ChangeEvent, FormEvent } from 'react'
 import { useCallback, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { login, resetLoginFormError } from './authSlice'
