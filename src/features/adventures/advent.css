@@ -2,6 +2,7 @@
   top: 0;
   left: 0;
   background-image: url('/img/bg-night.jpg');
+  background-size: cover;
   width: 100vw;
   height: 100vh;
   background-repeat: repeat-y;

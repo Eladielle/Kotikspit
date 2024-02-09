@@ -1,8 +1,8 @@
 export default function Footer(): JSX.Element {
 	return (
 		<>
-			<div className="container flex relative w-[100%] h-[100%] mb-20">
-				<div className="place-content-center w-full">
+			<div className="flex relative w-[100%] h-[100%] mb-20">
+				<div className="w-full">
 					<div className="flex justify-center">
 						<img
 							src="/img/logo29.png"
