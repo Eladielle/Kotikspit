@@ -12,7 +12,9 @@ const initialState: PageNewsState = {
 	error: undefined,
 }
 
-export const loadPageNews = createAsyncThunk('news/loadPageNews', () => api.getAll())
+export const loadPageNews = createAsyncThunk('news/loadPageNews', () =>
+	api.getAll()
+)
 
 export const pageNewsSlice = createSlice({
 	name: 'pageNews',

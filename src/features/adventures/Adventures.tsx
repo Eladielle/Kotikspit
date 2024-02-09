@@ -4,9 +4,9 @@ import './advent.css'
 export default function Adventures(): JSX.Element {
 	return (
 		<>
-			<main className="bg-adv w-full h-full">
+			<main className="bg-adv w-full h-full mb-[50px]">
 				<Navigation />
-				<div className="relative w-full h-full">
+				<div id="kernel" className="relative w-full h-full">
 					<div className="container mx-auto">
 						<img src="/img/img_kernel.jpg" alt="Kernel: Confrontation" />
 					</div>

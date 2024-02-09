@@ -1,5 +1,5 @@
 import type { ChangeEvent, FormEvent } from 'react'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 import { useAppDispatch, useAppSelector } from '../../app/hooks'
 import { login, resetLoginFormError } from './authSlice'
 import { VisibilityOff, Visibility } from '@mui/icons-material'

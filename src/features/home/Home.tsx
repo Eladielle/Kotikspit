@@ -4,58 +4,58 @@ export default function Home(): JSX.Element {
 	return (
 		<>
 			<Header />
-			<main className="flex relative w-full h-full mb-[300px]">
-				<div className="flex flex-col gap-5 items-center justify-center w-full">
-					<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-100px] w-3/4 h-full">
-						<div>
-							<img src="/img/i1.png" alt="Suooort" />
-						</div>
-						<div>
-							<img src="/img/i2.png" alt="Tracking System" />
-						</div>
-						<div>
-							<img src="/img/i3.png" alt="Multilevel platform" />
-						</div>
-						<div className="w-60 text-center">
-							<p>
-								<span className="text-[14px] text-primary">
-									Support and assistance
-								</span>
-								<br />
-								<span className="text-[14px] text-secondary">
-									from our qualified VR attendants
-								</span>
-							</p>
-						</div>
-						<div className="w-60 text-center">
-							<p>
-								<span className="text-[14px] text-primary">
-									Advanced tracking system
-								</span>
-								<br />
-								<span className="text-[14px] text-secondary">
-									will transfer your movements to
+			<main className="w-full h-full mb-[100px]">
+				<div>
+					<div className="flex flex-col gap-5 items-center justify-center w-full">
+						<div className="grid grid-cols-3 grid-rows-3 gap-x-0 gap-y-0 justify-items-center mt-[-130px] w-3/4 h-full">
+							<div>
+								<img src="/img/i1.png" alt="Support" />
+							</div>
+							<div>
+								<img src="/img/i2.png" alt="Tracking System" />
+							</div>
+							<div>
+								<img src="/img/i3.png" alt="Multilevel platform" />
+							</div>
+							<div className="w-60 text-center">
+								<p>
+									<span className="text-[14px] text-primary">
+										Support and assistance
+									</span>
 									<br />
-									game as realistic as possible
-								</span>
-							</p>
+									<span className="text-[14px] text-secondary">
+										from our qualified VR attendants
+									</span>
+								</p>
+							</div>
+							<div className="w-60 text-center">
+								<p>
+									<span className="text-[14px] text-primary">
+										Advanced tracking system
+									</span>
+									<br />
+									<span className="text-[14px] text-secondary">
+										will transfer your movements to
+										<br />
+										game as realistic as possible
+									</span>
+								</p>
+							</div>
+							<div className="w-60 text-center">
+								<p>
+									<span className="text-[14px] text-primary">
+										Multilevel, virtual platform
+									</span>
+									<br />
+									<span className="text-[14px] text-secondary">
+										3 times larger than a real playing field
+									</span>
+								</p>
+							</div>
 						</div>
-						<div className="w-60 text-center">
-							<p>
-								<span className="text-[14px] text-primary">
-									Multilevel, virtual platform
-								</span>
-								<br />
-								<span className="text-[14px] text-secondary">
-									3 times larger than a real playing field
-								</span>
-							</p>
-						</div>
-					</div>
-					<div className="w-[900px] mt-[-300px]">
-						<div>
+						<div className="w-[900px] mt-[-300px]">
 							<video
-								className="border-2 border-primary rounded-lg mt-[-100px]"
+								className="border-2 border-primary rounded-lg mt-[-150px]"
 								width="900"
 								height="600"
 								autoPlay
@@ -68,11 +68,11 @@ export default function Home(): JSX.Element {
 							<p className="text-secondary">GET YOUR TEAM TOGETHER</p>
 							<p className="text-primary">OTHER WORLDS ARE WAITING FOR YOU!</p>
 						</div>
-						<div className="p-2 mx-auto relative flex justify-center space-x-2 text-secondary mb-80">
-							<div className=" w-[1600px] absolute">
+						<div className="px-60 text-secondary">
+							<div>
 								<img src="/img/arena.png" alt="Arena" />
 							</div>
-							<div className="absolute text-lg border-2 border-primary p-6 w-2/4 right-0">
+							<div className="text-base border-2 border-primary w-4/5 mx-auto p-4 rounded-lg mt-10">
 								<p>
 									Virtual arena is a new, exciting and affordable virtual
 									reality attraction for location-based entertainment (LBE). The
@@ -86,10 +86,49 @@ export default function Home(): JSX.Element {
 									VA is the ultimate family-friendly and comfortable free-roam
 									VR experience for returning guests. It can be operated with
 									just one employee. Players are introduced to the experience in
-									less than 3 minutes. With the integrated tournament mode, you
+									less than 3 minutes. With the integrated tournament mode, we
 									can offer team events and e-sports activities even for large
 									groups.
 								</p>
+							</div>
+						</div>
+						<div className="text-[32px] font-black py-20 text-center">
+							<p className="text-secondary">
+								EXPERIENCE THE FASCINATING WORLD OF
+							</p>
+							<p className="text-primary">
+								BEYOUND REALMS 29 VR REALITY TODAY!
+							</p>
+						</div>
+						<div className="grid grid-cols-2 gap-5 place-content-stretch text-lg">
+							<div className="relative shrink w-auto">
+								<img src="/img/serv1.png" alt="Birthday Parties" />
+								<div className="absolute mx-auto ml-[30px] mt-[-50px] text-secondary">
+									BIRDAY PARTIES
+								</div>
+							</div>
+							<div className="relative shrink w-auto h-[310px]">
+								<img src="/img/serv2.png" alt="Gift Card" />
+								<div className="absolute mx-auto ml-[30px] mt-[-90px] text-secondary">
+									GIFT CARDS
+								</div>
+							</div>
+							<div className="absoluteshrink mx-auto mt-[80px]">
+								<img
+									src="/img/logo-2.png"
+									alt="Beyond Realms 29"
+									className="w-[600px]"
+								/>
+							</div>
+							<div>
+								<img
+									src="/img/serv3.png"
+									alt="Corporate events"
+									className="w-[500px]"
+								/>
+								<div className="absolute mx-auto ml-8 mt-[-60px] text-secondary">
+									CORPORATE EVENTS
+								</div>
 							</div>
 						</div>
 					</div>
