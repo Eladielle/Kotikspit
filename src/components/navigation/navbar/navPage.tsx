@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom'
 import Button from './button'
 import Logo from './logo'
-export default function Navbar({ toggle }: { toggle: () => void }) {
+export default function Navbar({
+	toggle,
+}: {
+	toggle: () => void
+}): JSX.Element {
 	return (
 		<>
 			<div className="w-full bg-black opacity-80 fixed top-0 left-0 z-10 text-sm text-white">
