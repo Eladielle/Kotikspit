@@ -5,9 +5,9 @@ export default function About(): JSX.Element {
 	return (
 		<>
 			<AboutHeader />
-			<div className="bg-main mb-[150px]">
-				<div className="w-3/4 absolute flex-col top-20 left-1/2 -translate-x-1/2">
-					<div className="bg-gray-900 opacity-80 max-w-6xl py-3 sm:px-6 lg:px-8 border-2 border-primary">
+			<div className="bg-main w-full h-full mb-[150px]">
+				<div className="flex-col gap-5">
+					<div className="bg-gray-900 container mx-auto w-3/5 opacity-80 py-2 sm:px-6 lg:px-8 border-2 border-primary">
 						<h1 className="text-xl font-bold text-white py-4">
 							Virtual reality without edges
 						</h1>
