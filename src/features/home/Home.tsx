@@ -104,13 +104,21 @@ export default function Home(): JSX.Element {
 							<div className="relative shrink w-auto">
 								<img src="/img/serv1.png" alt="Birthday Parties" />
 								<div className="absolute mx-auto ml-[30px] mt-[-50px] text-secondary">
-									BIRDAY PARTIES
+									<span>
+										<a href="/birthday" className="hover:text-primary">
+											BIRTHDAY PARTIES
+										</a>
+									</span>
 								</div>
 							</div>
 							<div className="relative shrink w-auto h-[310px]">
 								<img src="/img/serv2.png" alt="Gift Card" />
 								<div className="absolute mx-auto ml-[30px] mt-[-90px] text-secondary">
-									GIFT CARDS
+									<span>
+										<a href="/birthday" className="hover:text-primary">
+											GIFT CARD
+										</a>
+									</span>
 								</div>
 							</div>
 							<div className="absoluteshrink mx-auto mt-[80px]">
@@ -127,7 +135,11 @@ export default function Home(): JSX.Element {
 									className="w-[500px]"
 								/>
 								<div className="absolute mx-auto ml-8 mt-[-60px] text-secondary">
-									CORPORATE EVENTS
+									<span>
+										<a href="/birthday" className="hover:text-primary">
+											CORPORATE EVENTS
+										</a>
+									</span>
 								</div>
 							</div>
 						</div>
