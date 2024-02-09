@@ -12,13 +12,23 @@ import About from './features/about/About'
 import Contacts from './features/contacts/Contacts'
 import Experience from './features/experience/Experience'
 import ForgotPassword from './features/auth/ForgotPassword'
-import Comment from "./features/news/comment/Comment"
-import { user } from './features/auth/api'
+import Comment from './features/news/comment/Comment'
 import CreateGame from './features/games/CreateGame'
 import Confirm from './features/auth/Confirm'
-
+import OneGame from './features/games/OneGame/OneGame'
+import { useSelector } from 'react-redux'
+import { useAppDispatch } from './app/hooks'
+import { selectUser } from './features/auth/Selectors'
+import React from 'react'
+import { getUser } from './features/auth/authSlice'
 
 const App = (): React.ReactNode => {
+	const dispatch = useAppDispatch()
+	const user = useSelector(selectUser)
+
+	React.useEffect(() => {
+		dispatch(getUser())
+	}, [dispatch])
 	return (
 		<div>
 			<Routes>
@@ -27,8 +37,10 @@ const App = (): React.ReactNode => {
 					<Route path="experience" element={<Experience />} />
 					<Route path="adventures" element={<Adventures />} />
 					<Route path="games" element={<Games />} />
-					{/* {user && (user.role === 'Admin') && */}
-					<Route path="/adminCab" element={<CreateGame />} />
+					<Route path="game-details/:gameId" element={<OneGame />} />
+					{user && user.role === 'ADMIN' && (
+						<Route path="/adminCab" element={<CreateGame />} />
+					)}
 					<Route path="news" element={<PageNews />} />
 					<Route path="news/comment/:commentId" element={<Comment />} />
 					<Route path="news/:newsId" element={<OneNews />} />

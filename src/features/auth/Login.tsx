@@ -10,6 +10,7 @@ import {
 	InputAdornment,
 	IconButton,
 	Button,
+	createTheme,
 } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { selectAuth, selectLoginFormError } from './Selectors'
@@ -40,24 +41,19 @@ export default function Login(): JSX.Element {
 			)
 
 			if (login.fulfilled.match(dispatchResult)) {
-				navigate('/')
-			}
+				if (selector!.user?.role === 'USER') {
+						navigate('/');
+				}
+				if (selector!.user?.role === 'ADMIN') {
+						navigate('/adminCab');
+				}
+		}
 			if (login.rejected.match(dispatchResult)) {
 				console.error(dispatchResult.error.message)
 			}
 		},
 		[dispatch, email, password, navigate]
 	)
-	useEffect(() => {
-    if (selector!.user?.role === 'User') {
-      navigate('/');
-    }
-    if (selector!.user?.role === 'Admin') {
-      navigate('/adminCab');
-    }
-  }, [selector, navigate]);
-
-
 	const handleEmailChange = useCallback(
 		(e: ChangeEvent<HTMLInputElement>) => {
 			setEmail(e.target.value)
@@ -134,7 +130,7 @@ export default function Login(): JSX.Element {
 							/>
 						</Box>
 						<Box sx={{ textAlign: 'center', my: 4 }}>
-							<Button variant="contained" type="submit" color="error">
+						<Button variant="contained" type="submit" color="error">
 								Log in
 							</Button>
 							{error && <Box sx={{ display: 'block' }}>{error}</Box>}

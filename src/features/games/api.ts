@@ -18,9 +18,7 @@ export async function createGame(gameDTO: GameDto): Promise<Game> {
 
   return res.json();
 }
-export async function updateGame(
-  game: Game
-): Promise<Game> {
+export async function updateGame(game: Game): Promise<Game> {
   const res = await fetch(`/api/v1/games/${game.id}`, {
     method: 'PUT',
     body: JSON.stringify(game),
@@ -47,17 +45,4 @@ export async function deleteGame(id: GameId): Promise<Game> {
     },
   });
   return result.json();
-}
-
-export async function getGame(id: GameId): Promise<Game> {
-  const res = await fetch(`/api/v1/games/game${id}`, {
-    headers: {
-      accept: '*/*',
-    },
-  });
-  if (res.status >= 400) {
-    const answer = await res.json();
-    throw new Error(answer.message);
-  }
-  return res.json();
 }
