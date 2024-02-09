@@ -1,5 +1,6 @@
-export default interface GameDto {
-	image: File | null
+export default interface OneGame {
+  id: number
+	image: string
 	title: string
 	price: number
 	genre: string
@@ -11,3 +12,4 @@ export default interface GameDto {
 	releaseDate: string
 }
 
+export type OneGameId = OneGame['id'];

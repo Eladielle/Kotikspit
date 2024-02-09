@@ -1,84 +1,77 @@
-import { useNavigate } from 'react-router-dom';
-import {
-  Card,
-  CardContent,
-  CardMedia,
-  Typography,
-  Container,
-  Box,
-  CardActions,
-  Button,
-  CardHeader,
-} from '@mui/material';
-import { EuroRounded } from '@mui/icons-material';
-import { red } from '@mui/material/colors';
-import { useAppDispatch } from '../../app/hooks';
+import { useNavigate } from 'react-router-dom'
+import { EuroRounded } from '@mui/icons-material'
+import { useAppDispatch } from '../../app/hooks'
+import { deleteGame } from './gamesSlice'
+import './GameCard.css'
+import React from 'react'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../auth/Selectors'
+import { getUser } from '../auth/authSlice'
 
 export default function GameCard({
-  id,
+	id,
 	title,
 	price,
 	numberOfPlayers,
 	minAge,
-}: {	
-  id: number
-  image: string
+}: {
+	id: number
+	image: string
 	title: string
 	price: number
 	numberOfPlayers: string
 	minAge: string
 }): JSX.Element {
-  const navigate = useNavigate();
-  const handleClick = (): void => {
-    navigate(`/game-details/${id}`);
-  };
-  // const dispatch = useAppDispatch()
-  // const handleClickDelete = (id: number):void => {
-  //   dispatch(deleteGame(id));
-  // };
-  // useEffect(() => {
-  //   const gameData = (data: any): { type: string; payload: number } => ({
-  //     type: 'GameData',
-  //     payload: data,
-  //   });
-  //   dispatch(gameData(id));
-  // }, [dispatch, id]);
+	const navigate = useNavigate()
+	const handleClick = (): void => {
+		navigate(`/game-details/${id}`)
+	}
+	const handleClickPrice = (): void => {
+		navigate(`/experience`)
+	}
 
-  return (
-    <Container maxWidth="sm" >
-        <Card sx={{ 
-            maxWidth: 400,
-            minWidth: 400,
-            maxHeight: 460,
-            my: '2rem', 
-            }}>
-      <CardMedia
-        sx={{ height: 140 }}
-        onClick={handleClick}
-        image={`http://localhost:8080/api/v1/games/${id}/image`}
-        title="game image"
-      />
-      <CardContent sx={{ textAlign: 'center' }}>
-      <Typography gutterBottom variant="h4" component="div">
-        {title}
-      </Typography>
-        <Typography sx={{ mb: 2 }} variant="h4" component="div">
-          {minAge}
-        </Typography>
-        <Typography sx={{ mb: 2 }} variant="h5" color="text.secondary">
-         Players: {numberOfPlayers}
-        </Typography>
-      </CardContent>
-      <CardActions sx={{ mr: '0.5rem', justifyContent: 'right' }}>
-            <EuroRounded />
-            <Box fontSize={24}>{price}</Box>
-          </CardActions>
-      <CardActions sx={{ textAlign: 'center', bgcolor: red.A400, }}>
-        <Button variant="contained" color="secondary" size="medium">Buy ticket</Button>
-        {/* <Button variant="contained" color="secondary" size="medium" onClick={() => handleClickDelete(id)}>Delete</Button> */}
-        
-      </CardActions>
-    </Card>
-    </Container>
-  );
+	const dispatch = useAppDispatch()
+	const handleClickDelete = (id: number): void => {
+		dispatch(deleteGame(id))
+	}
+	const user = useSelector(selectUser)
+
+	React.useEffect(() => {
+		dispatch(getUser())
+	}, [dispatch])
+
+	return (
+		<div className="containerGames">
+			<div className="wrapperGames">
+				<div
+					className="banner-image-games"
+					style={{
+						backgroundImage: `url(http://localhost:8080/api/v1/games/${id}/image)`,
+					}}
+				>
+					{' '}
+				</div>
+				<h1 className="h1-g"> {title}</h1>
+				<p className="age-games">
+					 Age:{minAge} <br />
+					Players: {numberOfPlayers}
+				</p>
+			<div className="button-wrapper-games">
+				<button className="btng outlineGames"onClick={handleClick}>
+					DETAILS
+				</button>
+				<button className="btng fillgames"
+				onClick={handleClickPrice}
+				>{price}<EuroRounded />
+				</button>
+				{ user && user.role === 'ADMIN' && (<button
+					className="btng filllgames"
+					onClick={() => handleClickDelete(id)}
+				>
+					DELETE
+				</button>)}
+			</div>
+		</div>
+		</div>
+	)
 }

@@ -5,6 +5,7 @@ import pageNewsReducer from "../features/news/page-news/pageNewsSlice"
 import oneNewsReduser from "../features/news/one-news/NewsSlice"
 import commentsReduser from "../features/news/comment/CommentsSlice"
 import gamesSlice from "../features/games/gamesSlice"
+import oneGameReducer from "../features/games/OneGame/OneGameSlice"
 
 export const store = configureStore({
   reducer: {
@@ -12,7 +13,8 @@ export const store = configureStore({
     news: pageNewsReducer,
     oneNews: oneNewsReduser,
     comments: commentsReduser,
-    games: gamesSlice
+    games: gamesSlice,
+    oneGame: oneGameReducer,
   },
 
 })

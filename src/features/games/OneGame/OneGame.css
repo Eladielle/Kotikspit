@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+.containerGame {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  background-image: url('/img/bg-night.jpg');
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);  
+  padding: 38px;  
+  filter: drop-shadow(0 30px 10px rgba(0,0,0,0.125));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.wrapperGame {
+  width: 50%;
+  height: 70%;
+}
+
+.banner-image-game { 
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid rgba(228, 1, 249, 0.728)
+}
+
+.h1-gg{
+  font-family: 'Righteous', sans-serif;
+  color: rgba(255, 0, 55, 0.98);
+  text-transform: uppercase;
+  font-size: 2.0rem;
+  margin-top: 10px;
+}
+.d1-gg{
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 1.0rem;
+  line-height: 200%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.d2-gg{
+  color: #fff;
+  font-family: 'Righteous', sans-serif;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 250%;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-left: 1px;
+}
+.desc-game {
+  color: #fff;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  font-size: 0.7rem;
+  line-height: 200%;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.button-wrapper-game{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.btng {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-size: 0.8rem;  
+  letter-spacing: 2px;  
+  cursor: pointer;
+}
+
+.fillgame {
+  background: rgba(255, 0, 55, 0.9);
+  color: rgba(255,255,255,0.95);
+  filter: drop-shadow(0);
+  font-weight: bold;
+  transition: all .3s ease; 
+}
+
+.fillgame:hover{
+  transform: scale(1.125);  
+  border-color: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 10px 5px rgba(0,0,0,0.125));
+  transition: all .3s ease;    
+}
