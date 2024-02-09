@@ -1,11 +1,11 @@
 .butonn:hover {
   background: #ff0458;
   color: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #ff0458,
-              0 0 25px #ff0458,
-              0 0 50px #ff0458,
-              0 0 100px #ff0458;
+  border-radius: 0.5em;
+  box-shadow: 0 0 0.5em #ff0458,
+              0 0 2.5em #ff0458,
+              0 0 5em #ff0458,
+              0 0 10em #ff0458;
 }
 
 .buttonn span {

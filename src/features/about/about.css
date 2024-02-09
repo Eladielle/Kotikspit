@@ -3,17 +3,17 @@
   left: 0;
   background-image: url('/img/bg-about.jpg');
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size:contain;
   width: 100vw;
   height: 100vh;
 }
 .bg-main {
   top: 0;
   left: 0;
-  position: relative;
   background-image: url('/img/bg-night.jpg');
   width: 100vw;
   height: 100vh;
   background-repeat: repeat-y;
+  background-size: cover;
   background-attachment: fixed;
 }
